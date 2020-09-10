@@ -37,3 +37,4 @@ def length_of_longest_substring(str, k):
     max_length = max(max_length, window_end-window_start+1)
   return max_length
 
+# end-start+1-maxCount == 0, then then the window is filled with only one character
