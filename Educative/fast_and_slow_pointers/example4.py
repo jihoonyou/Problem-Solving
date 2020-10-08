@@ -24,8 +24,13 @@ class Node:
 
 
 def find_middle_of_linked_list(head):
-    # TODO: Write your code here
-    return head
+    slow = head
+    fast = head
+    while fast and fast.next:
+        slow = slow.next
+        fast = fast.next.next
+
+    return slow
 
 
 def main():
