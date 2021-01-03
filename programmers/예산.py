@@ -6,9 +6,9 @@ def solution(d, budget):
     answer = 0
     d.sort()
     for money in d:
-        if budget >= money:
-            budget -= money
-            answer += 1
-        else:
-            break
+        if budget < money:
+            return answer
+        budget -= money
+        answer += 1
+        
     return answer
