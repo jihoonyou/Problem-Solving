@@ -12,7 +12,7 @@ class Solution:
         one_step = head
         if not one_step or not one_step.next:
             return False
-        two_step = head.next
+        two_step = head
         
         while two_step.next and two_step.next.next:
             one_step = one_step.next
