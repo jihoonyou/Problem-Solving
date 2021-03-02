@@ -11,7 +11,7 @@ num_in_series = list(range(1, N+1))
 nums = []
 
 
-def dfs(x):
+def dfs():
     if len(nums) == M:
         print(*nums)
         return
@@ -22,10 +22,15 @@ def dfs(x):
         nums.append(num_in_series[i])
         visited[i] = True
 
-        dfs(x+1)
+        dfs()
 
         nums.pop()
         visited[i] = False
 
+dfs()
 
-dfs(0)
+# from itertools import permutations
+# N, M = map(int, input().split())
+# P = permutations(range(1, N+1), M)  # iter(tuple)
+# for i in P:
+#     print(' '.join(map(str, i)))  # tuple -> str
