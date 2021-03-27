@@ -24,3 +24,5 @@ while queue:
 
     count += 1
 print(-1)
+
+# 거꾸로 하면 더 빠르게 연산 가능
